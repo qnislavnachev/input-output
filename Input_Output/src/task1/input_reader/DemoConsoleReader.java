@@ -3,9 +3,9 @@ package task1.input_reader;
 /**
  * Created by clouway on 21.04.16.
  */
-public class DemoKeyReader {
+public class DemoConsoleReader {
   public static void main(String[] args) {
-    KeyReader test=new KeyReader();
+    ConsoleReader test=new ConsoleReader();
     test.readInt();
     test.readStr();
     test.readChar();

@@ -7,10 +7,10 @@ import java.io.IOException;
 /**
  * Created by clouway on 25.04.16.
  */
-public class DemoFileOperation {
+public class DemoTextFile {
   public static void main(String[] args) throws IOException, FileError {
-    FileOperation test=new FileOperation();
-    test.write("tests.txt");
-    test.reverse("tests.txt","reversed.txt");
+    TextFile demo=new TextFile();
+    demo.write("tests.txt");
+    demo.reverse("tests.txt","reversed.txt");
   }
 }

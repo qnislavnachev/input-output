@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by clouway on 21.04.16.
  */
-public class KeyReader {
+public class ConsoleReader {
   Scanner scan = new Scanner(System.in);
 
   /**
