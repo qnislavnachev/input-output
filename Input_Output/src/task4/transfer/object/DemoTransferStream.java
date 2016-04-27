@@ -1,16 +1,14 @@
 package task4.transfer.object;
 
-import task2.input.into.file.*;
-
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Created by clouway on 26.04.16.
  */
 public class DemoTransferStream {
-  public static void main(String[] args) throws IOException, task2.input.into.file.FileError {
-    TransferStream test=new TransferStream();
-    test.transferPartial("test.txt","partial.txt",2,4);
-
+  public static void main(String[] args) {
   }
 }
+

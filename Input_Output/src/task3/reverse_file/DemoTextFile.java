@@ -9,8 +9,8 @@ import java.io.IOException;
  */
 public class DemoTextFile {
   public static void main(String[] args) throws IOException, FileError {
-    TextFile demo=new TextFile();
-    demo.write("tests.txt");
-    demo.reverse("tests.txt","reversed.txt");
+    TextFile test=new TextFile("test.txt",".");
+    test.write();
+    test.reverse("reversed.txt");
   }
 }
