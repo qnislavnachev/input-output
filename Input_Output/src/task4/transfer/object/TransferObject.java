@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 /**
  * Created by clouway on 25.04.16.
  */
-public class TransferStream {
+public class TransferObject {
   public void transfer(String from, String to, int offset, int len, byte[] buffer) throws IOException {
     FileInputStream input = null;
     FileOutputStream output = null;

@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class DemoIOFile {
   public static void main(String[] args) throws IOException, FileError {
     IOFile test=new IOFile("demo.txt");
-    test.write("-");
+    test.write(".");
 
 
   }
