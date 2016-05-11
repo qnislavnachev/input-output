@@ -10,11 +10,12 @@ public class Student implements Serializable {
   private int facultyNumber;
   private int gradeMathematics;
   private int gradeInformatics;
-  public Student(String name,int facultyNumber,int gradeMathematics,int gradeInformatics){
+  public Student(String name, int facultyNumber, int gradeMathematics, int gradeInformatics){
     this.name=name;
     this.facultyNumber=facultyNumber;
     this.gradeMathematics=gradeMathematics;
     this.gradeInformatics=gradeInformatics;
+
   }
   public String StudentToString(){
     return "Name: "+this.name+"\n Faculty Number:"+this.facultyNumber+"\n Grade in Mathematics="+gradeInformatics+"\n Grade in Informatics="+this.gradeInformatics;

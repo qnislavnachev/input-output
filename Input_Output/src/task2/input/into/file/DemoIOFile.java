@@ -10,9 +10,14 @@ import java.util.Scanner;
  */
 public class DemoIOFile {
   public static void main(String[] args) throws IOException, FileError {
-    IOFile test=new IOFile("demo.txt");
-    test.write(".");
-
+    System.out.println("Enter file to which will be written to:");
+    Scanner sc=new Scanner(System.in);
+    String name=sc.nextLine();
+    IOFile test=new IOFile(name);
+    System.out.println("Enter Breaker for writing:");
+    String breaker=sc.nextLine();
+    System.out.println("Write to file.");
+    test.write(breaker);
 
   }
 }
