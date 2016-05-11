@@ -18,7 +18,7 @@ public class DemoTextFile {
     System.out.println("\nWrite to file:");
     TextFile test=new TextFile(name,breaker);
     test.write();
-    System.out.println("File will be reversed in reversed.txt");
+    System.out.println("File will be reversed in reversedfile.txt");
     test.reverse("reversedfile.txt");
   }
 }

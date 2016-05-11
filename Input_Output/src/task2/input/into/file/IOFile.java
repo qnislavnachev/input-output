@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.NoSuchElementException;
 
 public class IOFile {
-  public String filename;
+  private final String filename;
 
   public IOFile(String name) {
     filename=name;

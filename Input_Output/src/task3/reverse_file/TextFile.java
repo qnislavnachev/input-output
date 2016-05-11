@@ -13,8 +13,8 @@ import java.io.InputStreamReader;
  * Created by clouway on 22.04.16.
  */
 public class TextFile {
-  String filename;
-  String breaker;
+  private final String filename;
+  private final String breaker;
   public TextFile(String name,String breakerforwriting){
     filename=name;
     breaker=breakerforwriting;
