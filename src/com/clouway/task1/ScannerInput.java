@@ -6,7 +6,7 @@ package com.clouway.task1;
 
 import java.util.Scanner;
 
-public class ReadFromConsole {
+public class ScannerInput {
   public String readeString() {
     Scanner input = new Scanner(System.in);
     String s = input.nextLine();
