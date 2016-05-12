@@ -13,11 +13,11 @@ import java.io.InputStreamReader;
  * Created by clouway on 22.04.16.
  */
 public class TextFile {
-  private final String filename;
+  private final String name;
   private final String breaker;
-  public TextFile(String name,String breakerforwriting){
-    filename=name;
-    breaker=breakerforwriting;
+  public TextFile(String name,String breaker){
+    this.name =name;
+    this.breaker=breaker;
   }
   /**
    * The same method from task 2
@@ -26,7 +26,7 @@ public class TextFile {
    */
   public void write() throws IOException, FileError {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-    BufferedWriter output = new BufferedWriter(new FileWriter(filename));
+    BufferedWriter output = new BufferedWriter(new FileWriter(name));
     try {
       String line;
       do {
@@ -45,14 +45,14 @@ public class TextFile {
   /**
    * Reverse method using a StringBuilder buffer
    * to load the read line from the input stream
-   * and reverse it then ReadAndWriteTillReach it with the output
+   * and reverse it then write it with the output
    * stream to the new file.
    * @param tofile the file that will have the reversed strings.
    * @throws IOException
    * @throws FileError
    */
   public void reverse(String tofile) throws IOException, FileError {
-    BufferedReader input = new BufferedReader(new FileReader(filename));
+    BufferedReader input = new BufferedReader(new FileReader(name));
     BufferedWriter output = new BufferedWriter(new FileWriter(tofile));
     String line;
     try {

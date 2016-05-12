@@ -15,7 +15,7 @@ public class DemoIOFile {
     System.out.println("Enter Breaker for writing:");
     String breaker=sc.nextLine();
     System.out.println("Write to file.");
-    test.ReadAndWriteTillReach(breaker);
+    test.readAndWriteTillReach(breaker);
 
   }
 }
