@@ -15,5 +15,6 @@ public class Demo {
         reader.readChar();
         System.out.println("Enter a double: ");
         reader.readDouble();
+        System.out.println();
     }
 }
