@@ -1,8 +1,6 @@
 package task2.input.into.file;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -17,7 +15,7 @@ public class DemoIOFile {
     System.out.println("Enter Breaker for writing:");
     String breaker=sc.nextLine();
     System.out.println("Write to file.");
-    test.write(breaker);
+    test.ReadAndWriteTillReach(breaker);
 
   }
 }

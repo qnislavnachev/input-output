@@ -45,7 +45,7 @@ public class TextFile {
   /**
    * Reverse method using a StringBuilder buffer
    * to load the read line from the input stream
-   * and reverse it then write it with the output
+   * and reverse it then ReadAndWriteTillReach it with the output
    * stream to the new file.
    * @param tofile the file that will have the reversed strings.
    * @throws IOException

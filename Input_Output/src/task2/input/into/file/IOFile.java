@@ -26,7 +26,7 @@ public class IOFile {
    * @throws IOException
    * @throws FileError
    */
-  public void write(String breaker) throws IOException, FileError {
+  public void ReadAndWriteTillReach(String breaker) throws IOException, FileError {
     BufferedWriter output = new BufferedWriter(new FileWriter(filename));
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     String line;
