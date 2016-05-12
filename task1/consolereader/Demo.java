@@ -7,13 +7,13 @@ package task1.consolereader;
 public class Demo {
     public static void main(String[] args) {
         ConsoleReader reader = new ConsoleReader();
-        System.out.println("Enter a string: ");
+        System.out.println("Enter a string:");
         reader.readString();
-        System.out.println("Enter an int: ");
+        System.out.println("Enter an int:");
         reader.readInt();
-        System.out.println("Enter a char: ");
+        System.out.println("Enter a char:");
         reader.readChar();
-        System.out.println("Enter a double: ");
+        System.out.println("Enter a double:");
         reader.readDouble();
         System.out.println();
     }
