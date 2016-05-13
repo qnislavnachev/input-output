@@ -1,4 +1,4 @@
-package task2.consolewriter;
+package task2.fileoutput;
 
 import java.util.Scanner;
 
@@ -7,11 +7,12 @@ import java.util.Scanner;
  */
 public class Demo {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         String s = ".";
         System.out.println("Enter name for the file you are creating: ");
-        String string = scanner.nextLine();
+        String string = scan.nextLine();
         System.out.println("Type '.' to exit the program");
-        ConsoleWriter cw = new ConsoleWriter(string);
-        cw.createFile(s);
+        FileOutput cw = new FileOutput(string);
+        cw.create(s);
     }
+}
