@@ -12,7 +12,7 @@ public class Demo {
         System.out.println("Enter name for the file you are creating: ");
         String string = scan.nextLine();
         System.out.println("Type '.' to exit the program");
-        FileOutput cw = new FileOutput(string);
+        Writer cw = new Writer(string);
         cw.create(s);
     }
 }

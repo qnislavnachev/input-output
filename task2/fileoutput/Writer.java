@@ -8,12 +8,11 @@ import java.util.Scanner;
 /**
  * Created by clouway on 12.05.16.
  */
-
-public class FileOutput {
+public class Writer extends Reader {
     private String string;
     private File file;
 
-    public FileOutput(String string) {
+    public Writer(String string) {
         this.string = string;
     }
 
@@ -31,20 +30,5 @@ public class FileOutput {
         } catch (IOException z) {
             z.printStackTrace();
         }
-    }
-
-    private String read(String end) {
-        Scanner scanner = new Scanner(System.in);
-        String string = "";
-        boolean bool = true;
-        while (bool != false) {
-            String read = scanner.nextLine();
-            if (read.equals(end)) {
-                bool = false;
-            } else {
-                string += read;
-            }
-        }
-        return string;
     }
 }
