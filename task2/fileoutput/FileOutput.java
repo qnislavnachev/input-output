@@ -25,6 +25,14 @@ public class FileOutput {
         write(end);
     }
 
+    private void write(String end) {
+        try (FileWriter writeConsole = new FileWriter(string)) {
+            writeConsole.write(read(end));
+        } catch (IOException z) {
+            z.printStackTrace();
+        }
+    }
+
     private String read(String end) {
         Scanner scanner = new Scanner(System.in);
         String string = "";
@@ -39,13 +47,4 @@ public class FileOutput {
         }
         return string;
     }
-
-    private void write(String end) {
-        try (FileWriter writeConsole = new FileWriter(string)) {
-            writeConsole.write(read(end));
-        } catch (IOException z) {
-            z.printStackTrace();
-        }
-    }
-
 }
