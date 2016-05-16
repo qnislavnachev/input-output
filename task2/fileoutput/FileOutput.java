@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Created by clouway on 12.05.16.
  */
 public class FileOutput {
-    private String string;
+    private String name;
     private File file;
 
     /**
@@ -18,22 +18,22 @@ public class FileOutput {
      * @param name
      */
     public FileOutput(String name) {
-        this.string = name;
+        this.name = name;
     }
 
     /**
      * Reads from the console.
      *
-     * @param end
+     * @param text
      * @return
      */
-    public String read(String end) {
+    public String read(String text) {
         Scanner scan = new Scanner(System.in);
         String string = "";
         boolean bool = true;
         while (bool != false) {
             String read = scan.nextLine();
-            if (read.equals(end)) {
+            if (read.equals(text)) {
                 bool = false;
             } else {
                 string += read;
@@ -45,24 +45,24 @@ public class FileOutput {
     /**
      * Creates new file and writes into it
      *
-     * @param end
+     * @param text
      */
-    public void create(String end) {
+    public void create(String text) {
         if (file == null) {
             File createFile = new File("");
-            file = new File(createFile, string);
+            file = new File(createFile, name);
         }
-        write(end);
+        write(text);
     }
 
     /**
      * Writes in the file
      *
-     * @param end
+     * @param text
      */
-    private void write(String end) {
-        try (FileWriter writeConsole = new FileWriter(string)) {
-            writeConsole.write(read(end));
+    private void write(String text) {
+        try (FileWriter writeConsole = new FileWriter(name)) {
+            writeConsole.write(read(text));
         } catch (IOException z) {
             z.printStackTrace();
         }

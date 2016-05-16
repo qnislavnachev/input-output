@@ -15,7 +15,7 @@ public class File {
      * @throws IOException
      */
     public void reverseHorizontalText(String text) throws IOException {
-        write(text, getHorText(create(text)));
+        write(text, getHorText(reverseList(text)));
     }
 
     /**
@@ -72,7 +72,7 @@ public class File {
      * @return
      * @throws IOException
      */
-    public List<String> create(String filename) throws IOException {
+    public List<String> reverseList(String filename) throws IOException {
         List<String> list = new LinkedList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String s;
