@@ -62,9 +62,7 @@ public class File {
     }
 
     /**
-     * Creates buffer called "list"
-     * The buffer consists of reversed strings
-     * Each horizontal string is a new one
+     * Creates list and adds new reversed string on each line after reading it
      * @param filename
      * @return
      * @throws IOException
