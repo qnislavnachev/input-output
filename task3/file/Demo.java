@@ -1,4 +1,4 @@
-package task3.readtextreverse;
+package task3.file;
 
 import java.io.IOException;
 import java.util.Scanner;

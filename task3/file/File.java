@@ -1,4 +1,4 @@
-package task3.readtextreverse;
+package task3.file;
 
 import java.io.*;
 import java.util.LinkedList;
