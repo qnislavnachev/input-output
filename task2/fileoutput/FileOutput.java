@@ -24,16 +24,16 @@ public class FileOutput {
     /**
      * Reads from the console.
      *
-     * @param inputText
+     * @param exitText
      * @return
      */
-    public String read(String inputText) {
+    public String read(String exitText) {
         Scanner scan = new Scanner(System.in);
         String string = "";
         boolean bool = true;
         while (bool != false) {
             String read = scan.nextLine();
-            if (read.equals(inputText)) {
+            if (read.equals(exitText)) {
                 bool = false;
             } else {
                 string += read;
