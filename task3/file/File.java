@@ -10,11 +10,11 @@ import java.util.List;
 public class File {
     /**
      * Reverses the horizontal text that's in the file
-     * @param filename
+     * @param text
      * @throws IOException
      */
-    public void reverseHorizontalText(String filename) throws IOException {
-        write(filename, getHorText(create(filename)));
+    public void reverseHorizontalText(String text) throws IOException {
+        write(text, getHorText(create(text)));
     }
 
     /**
