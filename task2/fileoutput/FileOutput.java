@@ -58,11 +58,11 @@ public class FileOutput {
     /**
      * Writes in the file
      *
-     * @param symbol
+     * @param text
      */
-    private void write(String symbol) {
+    private void write(String text) {
         try (FileWriter writeConsole = new FileWriter(name)) {
-            writeConsole.write(read(symbol));
+            writeConsole.write(read(text));
         } catch (IOException z) {
             z.printStackTrace();
         }
