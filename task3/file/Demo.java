@@ -11,6 +11,6 @@ public class Demo {
         File rev = new File();
         Scanner scan = new Scanner(System.in);
         String string = scan.nextLine();
-        rev.reverse(string);
+        rev.reverseHorizontalText(string);
     }
 }

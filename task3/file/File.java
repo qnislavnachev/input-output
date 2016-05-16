@@ -9,12 +9,12 @@ import java.util.List;
  */
 public class File {
     /**
-     * Reverses the text that's in the file
+     * Reverses the horizontal text that's in the file
      * @param text
      * @throws IOException
      */
-    public void reverse(String text) throws IOException {
-        write(text, reverse(create(text)));
+    public void reverseHorizontalText(String text) throws IOException {
+        write(text, getHorText(create(text)));
     }
 
     /**
@@ -54,7 +54,7 @@ public class File {
      * @param horText
      * @return
      */
-    public List<String> reverse(List<String> horText) {
+    public List<String> getHorText(List<String> horText) {
         for (int i = 0; i < horText.size() - 1; i++) {
             horText.add(i, horText.remove(horText.size() - 1));
         }
