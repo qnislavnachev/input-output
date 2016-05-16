@@ -24,16 +24,16 @@ public class FileOutput {
     /**
      * Reads from the console.
      *
-     * @param text
+     * @param inputText
      * @return
      */
-    public String read(String text) {
+    public String read(String inputText) {
         Scanner scan = new Scanner(System.in);
         String string = "";
         boolean bool = true;
         while (bool != false) {
             String read = scan.nextLine();
-            if (read.equals(text)) {
+            if (read.equals(inputText)) {
                 bool = false;
             } else {
                 string += read;
@@ -58,11 +58,11 @@ public class FileOutput {
     /**
      * Writes in the file
      *
-     * @param text
+     * @param symbol
      */
-    private void write(String text) {
+    private void write(String symbol) {
         try (FileWriter writeConsole = new FileWriter(name)) {
-            writeConsole.write(read(text));
+            writeConsole.write(read(symbol));
         } catch (IOException z) {
             z.printStackTrace();
         }
