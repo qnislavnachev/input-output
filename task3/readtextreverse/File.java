@@ -7,23 +7,23 @@ import java.util.List;
 /**
  * Created by clouway on 13.05.16.
  */
-public class ReadTextReverse {
+public class File {
     /**
      * Reverses the text that's in the file
-     * @param string
+     * @param text
      * @throws IOException
      */
-    public void reverse(String string) throws IOException {
-        write(string, reverse(create(string)));
+    public void reverse(String text) throws IOException {
+        write(text, reverse(create(text)));
     }
 
     /**
-     * Reverses the string
-     * @param s
+     * Reverses the text
+     * @param text
      * @return
      */
-    public String reverseString(String s) {
-        char[] chars = s.toCharArray();
+    public String reverseText(String text) {
+        char[] chars = text.toCharArray();
         for (int i = 0; i < chars.length / 2; i++) {
             char swap = chars[i];
             chars[i] = chars[chars.length - i - 1];
@@ -34,11 +34,11 @@ public class ReadTextReverse {
 
     /**
      * Writes from the buffer to the file
-     * @param string
+     * @param text
      * @param buf
      */
-    public void write(String string, List<String> buf) {
-        try (FileWriter fw = new FileWriter(string)) {
+    public void write(String text, List<String> buf) {
+        try (FileWriter fw = new FileWriter(text)) {
             for (String s : buf) {
                 fw.write(s);
                 fw.write("");
@@ -51,30 +51,30 @@ public class ReadTextReverse {
 
     /**
      * Reverses the text horizontally
-     * @param hor
+     * @param horText
      * @return
      */
-    public List<String> reverse(List<String> hor) {
-        for (int i = 0; i < hor.size() - 1; i++) {
-            hor.add(i, hor.remove(hor.size() - 1));
+    public List<String> reverse(List<String> horText) {
+        for (int i = 0; i < horText.size() - 1; i++) {
+            horText.add(i, horText.remove(horText.size() - 1));
         }
-        return hor;
+        return horText;
     }
 
     /**
      * Creates buffer called "list"
      * The buffer consists of reversed strings
      * Each horizontal string is a new one
-     * @param string
+     * @param text
      * @return
      * @throws IOException
      */
-    public List<String> create(String string) throws IOException {
+    public List<String> create(String text) throws IOException {
         List<String> list = new LinkedList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(string))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(text))) {
             String s;
             while ((s = br.readLine()) != null) {
-                list.add(reverseString(s));
+                list.add(reverseText(s));
             }
         }
         return list;

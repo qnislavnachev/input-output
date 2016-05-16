@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Demo {
     public static void main(String[] args) throws IOException {
-        ReadTextReverse rev = new ReadTextReverse();
+        File rev = new File();
         Scanner scan = new Scanner(System.in);
         String string = scan.nextLine();
         rev.reverse(string);
