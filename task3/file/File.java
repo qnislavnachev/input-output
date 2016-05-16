@@ -10,6 +10,7 @@ import java.util.List;
 public class File {
     /**
      * Reverses the horizontal text that's in the file
+     *
      * @param text
      * @throws IOException
      */
@@ -19,6 +20,7 @@ public class File {
 
     /**
      * Reverses the text
+     *
      * @param text
      * @return
      */
@@ -34,6 +36,7 @@ public class File {
 
     /**
      * Writes from the buffer to the file
+     *
      * @param filename
      * @param buf
      */
@@ -51,6 +54,7 @@ public class File {
 
     /**
      * Reverses the text horizontally
+     *
      * @param horText
      * @return
      */
@@ -63,6 +67,7 @@ public class File {
 
     /**
      * Creates list and adds new reversed string on each line after reading it
+     *
      * @param filename
      * @return
      * @throws IOException

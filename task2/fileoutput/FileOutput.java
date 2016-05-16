@@ -14,6 +14,7 @@ public class FileOutput {
 
     /**
      * Constructor
+     *
      * @param name
      */
     public FileOutput(String name) {
@@ -22,6 +23,7 @@ public class FileOutput {
 
     /**
      * Reads from the console.
+     *
      * @param end
      * @return
      */
@@ -42,6 +44,7 @@ public class FileOutput {
 
     /**
      * Creates new file and writes into it
+     *
      * @param end
      */
     public void create(String end) {
@@ -54,6 +57,7 @@ public class FileOutput {
 
     /**
      * Writes in the file
+     *
      * @param end
      */
     private void write(String end) {
