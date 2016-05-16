@@ -13,10 +13,10 @@ public class Writer extends Reader {
 
     /**
      * Constructor
-     * @param string
+     * @param name
      */
-    public Writer(String string) {
-        this.string = string;
+    public Writer(String name) {
+        this.string = name;
     }
 
     /**

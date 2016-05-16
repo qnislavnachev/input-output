@@ -10,11 +10,11 @@ import java.util.List;
 public class File {
     /**
      * Reverses the horizontal text that's in the file
-     * @param text
+     * @param filename
      * @throws IOException
      */
-    public void reverseHorizontalText(String text) throws IOException {
-        write(text, getHorText(create(text)));
+    public void reverseHorizontalText(String filename) throws IOException {
+        write(filename, getHorText(create(filename)));
     }
 
     /**
@@ -34,11 +34,11 @@ public class File {
 
     /**
      * Writes from the buffer to the file
-     * @param text
+     * @param filename
      * @param buf
      */
-    public void write(String text, List<String> buf) {
-        try (FileWriter fw = new FileWriter(text)) {
+    public void write(String filename, List<String> buf) {
+        try (FileWriter fw = new FileWriter(filename)) {
             for (String s : buf) {
                 fw.write(s);
                 fw.write("");
@@ -65,13 +65,13 @@ public class File {
      * Creates buffer called "list"
      * The buffer consists of reversed strings
      * Each horizontal string is a new one
-     * @param text
+     * @param filename
      * @return
      * @throws IOException
      */
-    public List<String> create(String text) throws IOException {
+    public List<String> create(String filename) throws IOException {
         List<String> list = new LinkedList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(text))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String s;
             while ((s = br.readLine()) != null) {
                 list.add(reverseText(s));
