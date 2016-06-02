@@ -1,31 +1,38 @@
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 
-import static java.nio.file.Files.isDirectory;
-
 /**
- * Created by clouway on 30.05.16.
+ * Created by clouway on 02.06.16.
  */
 public class DirectoryBrowser {
 
   /**
-   * Adding content of an dir to file array and return array.
-   * String source file phat.
+   * Returns list of subdirectory and file, if it is given directory
+   * and returns list of one file if it is given file.
    *
-   * @return array of files.
+   * @param file file or dir.
+   * @return list of objects of class FileBox.
    */
-  public File[] listContent(String source) {
-
-    File file = new File(source);
+  public List<FileBox> listContent(File file) {
+    List<FileBox> boxes = new LinkedList<>();
 
     if (file.isDirectory()) {
-      return file.listFiles();
+
+      for (File f : file.listFiles()) {
+
+        if (f.isDirectory()) {
+          FileBox fileBox = new FileBox(true, f);
+          boxes.add(fileBox);
+        } else {
+          FileBox fileBox = new FileBox(false, f);
+          boxes.add(fileBox);
+        }
+      }
     } else {
-      File[] oneFile = {file};
-      return oneFile;
+      FileBox fileBox = new FileBox(false, file);
+      boxes.add(fileBox);
     }
+    return boxes;
   }
 }
