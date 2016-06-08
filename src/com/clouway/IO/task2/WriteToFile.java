@@ -3,15 +3,17 @@ package com.clouway.IO.task2;
 import java.io.*;
 
 public class WriteToFile {
-    private InputStreamReader input = new InputStreamReader(System.in);
-    private BufferedReader in = new BufferedReader(input);
+    private InputStreamReader input = null;
+    private BufferedReader in = null;
     private PrintWriter output = null;
 
     public void writeInFile(String fileName){
         boolean flag = true;
+        input = new InputStreamReader(System.in);
+        in = new BufferedReader(input);
 
         try {
-            output = new PrintWriter(fileName);
+            output = new PrintWriter(fileName, "UTF-8");
         } catch (IOException e) {
             System.out.println("Output error!");
         }
