@@ -44,4 +44,21 @@ public class Reader {
         }
         return 0;
     }
+
+    public void close(){
+        if(in != null){
+            try {
+                in.close();
+            } catch (IOException e) {
+                System.out.println("Error while closing the input stream!");
+            }
+        }
+        if(input != null){
+            try {
+                input.close();
+            } catch (IOException e) {
+                System.out.println("Error while closing the input stream!");
+            }
+        }
+    }
 }

@@ -5,6 +5,7 @@ public class Demo {
         Reader read = new Reader();
         int tempInt = read.readInt();
         char c = read.readChar();
+        read.close();
         System.out.print("The integer is: " + tempInt + "\n");
         System.out.print("The char is: " + c);
     }
