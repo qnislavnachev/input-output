@@ -11,6 +11,7 @@ out/
 *.war
 *.ear
 *.xml
+idea/
 
 # User-specific stuff:
 .idea/workspace.xml
