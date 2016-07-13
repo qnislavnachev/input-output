@@ -8,14 +8,17 @@ import java.util.Scanner;
 public class Demo {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
-        FileWriter writer = new FileWriter(new File("MyFile.md"));
+        FileWriter writer = new FileWriter(new File("textFile.md"));
         System.out.println("Enter some text: ");
         String text;
-        do {
-            text = scan.nextLine();
-        }while(!text.contains("."));
-        String[] part = text.split("\\.");
-        writer.write(part[0]);
-        writer.close();
+        while (true) {
+            text = scan.next();
+            if (text.equals(".")) {
+                break;
+            }
+            writer.write(text);
+            writer.close();
+        }
     }
 }
+

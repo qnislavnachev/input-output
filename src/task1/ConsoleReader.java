@@ -1,6 +1,7 @@
 package task1;
 
 public class ConsoleReader {
+
     public String readString(String someString) {
         return someString;
     }
