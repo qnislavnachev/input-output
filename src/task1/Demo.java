@@ -1,21 +1,28 @@
 package task1;
 
-import java.util.Scanner;
-
 public class Demo {
     public static void main(String[] args) {
         ConsoleReader reader = new ConsoleReader();
-        Scanner scan = new Scanner(System.in);
+        boolean done = false;
+
+        //read string from console
         System.out.println("Enter String: ");
-        reader.readString(scan.nextLine());
+        reader.readString();
+
+        //read integer from console
         System.out.println("Enter Integer: ");
-        try {
-            reader.readInt(scan.nextInt());
-        } catch (Exception e) {
-            throw new WrongValueException("Wrong Integer!");
-        }
-        System.out.println("Enter char: ");
-        reader.readChar(scan.next().charAt(0));
+        do {
+            try {
+                reader.readInt();
+                done = true;
+            } catch (InputDataException ex) {
+                System.out.println("This is not an Integer! Enter new Integer: ");
+            }
+        }while (!done);
+
+        // read character from console
+        System.out.println("Enter Character: ");
+        reader.readChar();
 
     }
 }
