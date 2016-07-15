@@ -25,11 +25,12 @@ public class DataClass {
         outObj.close();
     }
 
-    public void getObject() throws IOException, ClassNotFoundException {
+    public Object getObject() throws IOException, ClassNotFoundException {
         inObj = new ObjectInputStream(in);
         SomeObject someObj = (SomeObject) inObj.readObject();
         System.out.println("Object read!");
         in.close();
         inObj.close();
+        return someObj;
     }
 }
