@@ -1,8 +1,6 @@
 package task5;
 
 import java.io.*;
-import java.io.InputStream;
-import java.io.OutputStream;
 
 public class DataClass {
     private ObjectInputStream inObj;
