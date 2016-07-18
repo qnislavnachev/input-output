@@ -9,10 +9,10 @@ public class Demo {
         FileOutputStream fileOut = new FileOutputStream("objOut.bin");
         FileInputStream fileIn = new FileInputStream("objOut.bin");
         DataClass data = new DataClass(fileIn,fileOut);
-        SomeObject someObject = new SomeObject(8, 10);
+        Car car = new Car(8, 10);
 
-        data.saveObject(someObject);
+        data.saveObject(car);
         data.getObject();
-        System.out.println("Object Size: " + someObject.size + "\n" + "Object Weigth: " + someObject.weigth);
+        System.out.println("Object Size: " + car.size + "\n" + "Object Weigth: " + car.weigth);
     }
 }

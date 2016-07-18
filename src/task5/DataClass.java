@@ -1,7 +1,5 @@
 package task5;
 
-import org.omg.CORBA.portable.*;
-
 import java.io.*;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -27,7 +25,7 @@ public class DataClass {
 
     public Object getObject() throws IOException, ClassNotFoundException {
         inObj = new ObjectInputStream(in);
-        SomeObject someObj = (SomeObject) inObj.readObject();
+        Car someObj = (Car) inObj.readObject();
         System.out.println("Object read!");
         in.close();
         inObj.close();
