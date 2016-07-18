@@ -1,30 +1,25 @@
 package task3;
 
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class Demo {
-    public static void main(String[] args) throws IOException {
-        //create new  file reader
-        FileReader file = new FileReader("MyFile.md");
+    public static void main(String[] args) {
+        FileContainer container = new FileContainer();
+        String fileName = "MyFile.md";
+        String line = "";
 
-        //create new buffered reader
-        BufferedReader br = new BufferedReader(file);
-        String line = br.readLine(); // read the file
-        br.close();
+        try {
+            line = container.createFileReader(fileName);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
-        //reversing text from file
-        String reverse = new StringBuffer(line).reverse().toString();
-        System.out.println(reverse);
+        String reversedText = new StringBuffer(line).reverse().toString();
 
-        //create new file writer
-        FileWriter fw = new FileWriter("MyFile.md");
-
-        //write reversed text to the file
-        fw.write(reverse);
-        fw.close();
+        try {
+            container.saveReversedText(fileName, reversedText);
+        } catch (IOException ex1) {
+            ex1.printStackTrace();
+        }
     }
 }

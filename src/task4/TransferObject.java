@@ -14,7 +14,6 @@ public class TransferObject {
         }
         in.close();
         out.close();
-
     }
 }
 

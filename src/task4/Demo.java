@@ -11,5 +11,8 @@ public class Demo {
         FileOutputStream out = new FileOutputStream("YourFile.md");
 
         transferObject.transfer(in,out,2,7);
+
+        in.close();
+        out.close();
     }
 }
