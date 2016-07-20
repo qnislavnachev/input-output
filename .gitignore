@@ -18,6 +18,8 @@ out/
 .idea/vcs.xml
 .idea/misc.xml
 .idea/jsLibraryMappings.xml
+.idea/
+out/
 
 # File-based project format:
 *.iws
